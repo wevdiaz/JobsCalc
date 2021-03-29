@@ -1,11 +1,11 @@
-# JobsCalc
+  # JobsCalc  ![icone da logo](https://raw.githubusercontent.com/wevdiaz/JobsCalc/main/public/images/favicon.png) 
  Projeto sendo realizado na Maratona Discovery 2 Edição da rocketseat.
  
  Esse projeto está focado no lado Back-end e suas tecnologias.
  
  ***
  
- # Tecnologias
+ # Tecnologias :hammer_and_wrench:
  
  * Node js
  * Express
