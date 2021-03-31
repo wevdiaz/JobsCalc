@@ -16,7 +16,7 @@ const Profile = {
 
     controllers: {
         index(req, res) {
-            return res.render( views + "profile", { profile });
+            return res.render( views + "profile", { profile: Profile.data });
         },
 
         update(req, res) {
@@ -72,9 +72,9 @@ const Job = {
         },
 
         save(req, res) {
-            const lastId = Job.data[jobs.length - 1]?.id || 1;   
+            const lastId = Job.data[Job.data.length - 1]?.id || 1;   
 
-            jobs.push({
+            Job.data.push({
                 id: lastId + 1,
                 name: req.body.name,
                 'daily-hours': req.body['daily-hours'],

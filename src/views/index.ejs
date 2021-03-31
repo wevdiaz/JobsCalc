@@ -88,11 +88,13 @@
                 <span>Prazo</span>
 
                 <p>
-                  <% if(job.status === "progress") { %>
-                    
+                  <% if(job.status === "progress") { %>                    
                     <%= job.remaining %>  dias para a entrega
 
+                  <% } else { %>
+                    Prazo Encerrado
                   <% } %>
+
                 </p>
 
               </div>
