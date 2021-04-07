@@ -12,7 +12,7 @@ const initDb = {
             avatar TEXT,
             monthly_budget INT,
             days_per_week INT,
-            hours_per_week INT,
+            hours_per_day INT,
             vacation_per_year INT,
             value_hour INT
         )`);
@@ -30,7 +30,7 @@ const initDb = {
             avatar,
             monthly_budget,
             days_per_week,
-            hours_per_week,
+            hours_per_day,
             vacation_per_year,
             value_hour
         ) VALUES (

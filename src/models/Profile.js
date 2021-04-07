@@ -1,19 +1,38 @@
-let data = {
-    name: "Diazz",
-    avatar: "https://scontent-gru1-2.xx.fbcdn.net/v/t31.0-1/p160x160/13323239_982612931852428_1595034926018732273_o.jpg?_nc_cat=110&ccb=1-3&_nc_sid=dbb9e7&_nc_ohc=LflBkCeSIDcAX-VUJZz&_nc_ht=scontent-gru1-2.xx&tp=6&oh=13446b102e9f1be61ebb5ef47f593a68&oe=60858356",
-    "monthly-budget": 2000,
-    "days-per-week": 5,
-    "hours-per-day": 8,
-    "vacation-per-year": 2,
-    "value-hour": 75
-}
+const Database = require("../db/config");
 
 module.exports = {
-    get() {
-        return data;
+    async get() {
+        const db = await Database();
+
+        const data = await db.get(`SELECT * FROM profile`);
+
+        await db.close();         
+        
+        return {
+            name: data.name,
+            avatar: data.avatar,
+            "monthly-budget": data.monthly_budget,
+            "days-per-week": data.days_per_week,
+            "hours-per-day": data.hours_per_day,
+            "vacation-per-year": data.vacation_per_year,
+            "value-hour": data.value_hour
+        }
     },
 
-    update(newData) {
-        data = newData;
+    async update(newData) {
+        const db = await Database();
+
+        db.run(`UPDATE profile SET
+            name = "${newData.name}",
+            avatar = "${newData.avatar}",
+            monthly_budget = ${newData["monthly-budget"]},
+            days_per_week = ${newData["days-per-week"]},
+            hours_per_day = ${newData["hours-per-day"]},
+            vacation_per_year = ${newData["vacation-per-year"]},
+            value_hour = ${newData["value-hour"]}
+            `);
+
+        await db.close();
+        
     }
 }
