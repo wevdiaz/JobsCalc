@@ -1,7 +1,29 @@
-  # JobsCalc  ![icone da logo](https://raw.githubusercontent.com/wevdiaz/JobsCalc/main/public/images/favicon.png) 
- Projeto sendo realizado na Maratona Discovery 2 Edição da rocketseat.
+   
+  # JobsCalc  ![icone da logo](https://raw.githubusercontent.com/wevdiaz/JobsCalc/main/public/images/favicon.png)
+  ***
+  
+  
+  <p align="center">  
+      <a>
+          <img src="https://img.shields.io/github/repo-size/wevdiaz/JobsCalc?color=orange">
+      </a>  
+      <a>
+          <img src="https://img.shields.io/github/license/wevdiaz/JobsCalc?color=orange">
+      </a>      
+      <a>
+          <img src="https://img.shields.io/github/languages/count/wevdiaz/JobsCalc?color=orange">
+      </a>      
+      <a>
+          <img alt="Diazz" src="https://img.shields.io/badge/made%20by-Diazz-JobsCalc?color=orange">          
+      </a>      
+  </p> 
+ 
+  
+ Projeto realizado na Maratona Discovery 2 Edição da rocketseat.
  
  Esse projeto está focado no lado Back-end e suas tecnologias.
+ 
+ O projeto cadastra um job, com o cálculo de dias para execução até o encerramento. Também aplicamos um CRUD, desta maneiraé possível Criar um job, atualizar, mostrar e deletar nobanco de dados.
  
  ***
  
@@ -10,6 +32,7 @@
  * Node js
  * Express
  * Ejs
+ * SQLite3
  
  ***
  
